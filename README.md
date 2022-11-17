@@ -48,6 +48,13 @@
 * Ayrılmanın bir başka önemli nedeni de bu sınıfta sunucuya ilettiğiniz verileri ve ayrıca sunucunun size verdiği verileri değiştirebilmenizdir. Bu sınıfta doğrulamalar yapabilir, hataları işleyebilir, vb.
 * *lib > data > repository > user_repository.dart*
 
+### Error Handling
+* DioError'u yakalamak için DioException sınıfını kullanalım
+* Temel olarak, anlaşılabilen hata mesajını döndüren ayrı bir sınıf oluşturalım.
+* Hatalar; Bağlantı zaman aşımı mesajı, iptal isteği hatası veya sunucu tarafından da gönderilen hata olabilir.
+* *lib > data > network > dio_exception.dart*
+
+
 
 
 
