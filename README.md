@@ -2,15 +2,10 @@
 
 A new Flutter project.
 
-## Getting Started
+## Dio_Clint
 
-This project is a starting point for a Flutter application.
+# Dependency Installation
+* [dio: ^4.0.6](https://pub.dev/packages/dio)
+* [get_it 7.2.0](https://pub.dev/packages/get_it)
+* [intl 0.17.0](https://pub.dev/packages/intl)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
