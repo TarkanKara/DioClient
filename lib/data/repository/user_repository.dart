@@ -4,6 +4,7 @@ import 'package:dio_client/data/models/new_user_model.dart';
 import 'package:dio_client/data/models/user_model.dart';
 import 'package:dio_client/data/network/api/user/user_api.dart';
 import 'package:dio/dio.dart';
+import 'package:dio_client/data/network/dio_exception.dart';
 
 class UserRepository {
   final UserApi userApi;
@@ -18,8 +19,9 @@ class UserRepository {
           .map((e) => UserModel.fromJson(e))
           .toList();
       return users;
-    } catch (e) {
-      rethrow;
+    } on DioError catch (e) {
+      final errorMessage = DioExceptions.fromDioError(e).toString();
+      throw errorMessage;
     }
   }
 
@@ -28,8 +30,9 @@ class UserRepository {
     try {
       final Response response = await userApi.addUserApi(name, job);
       return NewUser.fromJson(response.data);
-    } catch (e) {
-      rethrow;
+    } on DioError catch (e) {
+      final errorMesage = DioExceptions.fromDioError(e).toString();
+      throw errorMesage;
     }
   }
 
@@ -38,8 +41,9 @@ class UserRepository {
     try {
       final Response response = await userApi.updateUserApi(id, name, job);
       return NewUser.fromJson(response.data);
-    } catch (e) {
-      rethrow;
+    } on DioError catch (e) {
+      final errorMesage = DioExceptions.fromDioError(e).toString();
+      throw errorMesage;
     }
   }
 
@@ -47,8 +51,9 @@ class UserRepository {
   Future<void> deletedNewUserRequested(int id) async {
     try {
       await userApi.deleteUserApi(id);
-    } catch (e) {
-      rethrow;
+    } on DioError catch (e) {
+      final errorMesage = DioExceptions.fromDioError(e).toString();
+      throw errorMesage;
     }
   }
 }
