@@ -64,6 +64,14 @@
 * Hizmet Bulucu kavramına aşina değilseniz, arabirimi (soyut temel sınıf) somut bir uygulamadan ayırmanın bir yoludur ve aynı zamanda somut uygulamaya arabirim üzerinden Uygulamanızın her yerinden erişmenize olanak tanır.
 * **get_it paketi,** bağımlılık enjeksiyonunu bizim için çok kolaylaştırıyor.
 
+### Building UI
+* Ana Sayfa kullanıcı listesini içerecek
+* Kullanıcıları görüntülemek için **FutureBuilder** kullanacağız,
+* Sunucu başarıyla bir veri döndürdüğünde, aksi halde bir hata gösteririz.
+* *lib > ui > home_page.dart*
+* Controller oluşturulmasının nedeni, iş mantığını kullanıcı arabiriminden ayırmaktır. 
+* *lib > ui > controller.dart*
+
 
 
 
