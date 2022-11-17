@@ -63,7 +63,10 @@
 * Hatalar; Bağlantı zaman aşımı mesajı, iptal isteği hatası veya sunucu tarafından da gönderilen hata olabilir.
 * *lib > data > network > dio_exception.dart* 
 * [dio_exception.dart](https://github.com/TarkanKara/DioClient/blob/master/lib/data/network/dio_exception.dart)
-* relavent message ; *final errorMessage = DioExceptions.fromDioError(e).toString();*
+* relavent message ; 
+* ```dart
+    final errorMessage = DioExceptions.fromDioError(e).toString();
+  ```
 
 ### Injecting Dependency => GetIt
 * Singleton sınıflarını enjekte etmek için [GetIt](https://pub.dev/packages/get_it) paketini kullanıyoruz.
