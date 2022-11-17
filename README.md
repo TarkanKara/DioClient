@@ -53,6 +53,16 @@
 * Temel olarak, anlaşılabilen hata mesajını döndüren ayrı bir sınıf oluşturalım.
 * Hatalar; Bağlantı zaman aşımı mesajı, iptal isteği hatası veya sunucu tarafından da gönderilen hata olabilir.
 * *lib > data > network > dio_exception.dart*
+* relavent message ; *final errorMessage = DioExceptions.fromDioError(e).toString();*
+
+### Injecting Dependency => GetIt
+* Singleton sınıflarını enjekte etmek için [GetIt](https://pub.dev/packages/get_it) paketini kullanıyoruz.
+* *lib > di > service_locator.dart*
+*  **Injecting Dependency** Bir sınıfın bağımlılıkları oluşturmak yerine dış kaynaklardan bağımlılık talep ettiği bir tasarım modelidir.
+* Bu, bağımlı nesnelerin sınıfınıza enjekte edildiği veya sağlandığı anlamına gelir.
+* Sınıfın kendi başına herhangi bir başlatma yapması gerekmez. Enjektörden istediğini alacak.
+* Hizmet Bulucu kavramına aşina değilseniz, arabirimi (soyut temel sınıf) somut bir uygulamadan ayırmanın bir yoludur ve aynı zamanda somut uygulamaya arabirim üzerinden Uygulamanızın her yerinden erişmenize olanak tanır.
+* **get_it paketi,** bağımlılık enjeksiyonunu bizim için çok kolaylaştırıyor.
 
 
 
