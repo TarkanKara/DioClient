@@ -3,6 +3,7 @@
 import 'package:dio_client/data/models/user_model.dart';
 import 'package:dio_client/di/service_locator.dart';
 import 'package:dio_client/ui/new_user_page.dart';
+import 'package:dio_client/ui/widgets/add_user_btn.dart';
 import 'package:flutter/material.dart';
 
 import 'controller.dart';
@@ -17,6 +18,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const BaseAppBar(),
+      floatingActionButton: AddUserBtn(),
       body: FutureBuilder<List<UserModel>>(
         future: homeController.getUsers(),
         builder: (context, snapshot) {
