@@ -29,7 +29,7 @@ class _NewUserPageState extends State<NewUserPage> {
                 }).then((value) {
                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                     content: Text("User Deleted Successfully"),
-                    duration: Duration(microseconds: 1000),
+                    duration: Duration(seconds: 1),
                   ));
                 });
               },
