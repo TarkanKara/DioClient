@@ -86,9 +86,16 @@
 * [home_page.dart](https://github.com/TarkanKara/DioClient/blob/master/lib/ui/home_page.dart)
 * Controller oluşturulmasının nedeni, iş mantığını kullanıcı arabiriminden ayırmaktır. 
 * *lib > ui > controller.dart*
-* Controller içerisinde repositories, validations gibi işlemleriyapabiliriz.
+* Controller içerisinde repositories, validations gibi işlemleri yapabiliriz.
 
-
+### Application Flow
+* Uygulamayı ilk başlattığınızda, FutureBuilder denetleyicinin **'getUser()'** fonksiyonu çağırır ve verileri almaya başlarız.
+* Veriler Başarıyla getirildikten sonra ListTile içinde görüntüleriz.
+* Bir hata oluşursa, hata **FutureBuilder** tarafından gösterilecektir.
+* FloatingAction butonuna tıklanarak yeni bir kullanıcı eklemek istediğpimizde, yeni kullanıcının adını ve iş tanımını girebileceğiniz bir alt sayfa açılacaktır.
+* Ekle düğmesine tıkladıktan sonra, yeni eklenen tüm kullanıcıların listelendiği Yeni Kullanıcılar sayfasına yönlendirileceksiniz.
+* Yeni eklenen bir kullanıcının ayrıntılarını güncellemek için, herhangi bir kullanıcı ListTiles'a tıklayın ve kişinin adını ve işini değiştirebileceğiniz bir alt sayfa görünecektir.
+* ListTile alanına basılı tutarak yeni eklenen kullanıcılar listesinden bir kullanıcıyı kaldırabilirsiniz.
 
 
 
