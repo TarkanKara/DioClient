@@ -81,11 +81,13 @@
 ### Building UI
 * Ana Sayfa kullanıcı listesini içerecek
 * Kullanıcıları görüntülemek için **FutureBuilder** kullanacağız,
-* Sunucu başarıyla bir veri döndürdüğünde, aksi halde bir hata gösteririz.
+* Sunucu başarıyla bir veri döndürdüğünde kullanıcıları görüntülemek için kullanacağız, aksi halde bir hata gösteririz.
 * *lib > ui > home_page.dart*
 * [home_page.dart](https://github.com/TarkanKara/DioClient/blob/master/lib/ui/home_page.dart)
 * Controller oluşturulmasının nedeni, iş mantığını kullanıcı arabiriminden ayırmaktır. 
 * *lib > ui > controller.dart*
+* Controller içerisinde repositories, validations gibi işlemleriyapabiliriz.
+
 
 
 
