@@ -12,7 +12,7 @@ class DioExceptions implements Exception {
             "Request to API server was cancelled"; //API sunucusu isteği iptal edildi
         break;
 
-      case DioErrorType.connectTimeout:
+      case DioErrorType.connectionTimeout:
         message =
             "Connection timeout with API server"; //API sunucusuyla bağlantı zaman aşımı
         break;
@@ -27,16 +27,16 @@ class DioExceptions implements Exception {
             "Send timeout in connection with API server"; //API sunucusuyla bağlantılı olarak zaman aşımı gönder
         break;
 
-      case DioErrorType.other:
+      case DioErrorType.unknown:
         //Soket İstisnası
-        if (dioError.message.contains("SocketException")) {
+        if (dioError.message!.contains("SocketException")) {
           message = "No Internet"; //İnternet Yok
           break;
         }
         message = "Unexpected error occurred"; //Beklenmedik hata oluştu
         break;
 
-      case DioErrorType.response:
+      case DioErrorType.badResponse:
         message = _handleError(
             dioError.response?.statusCode, dioError.response?.data);
         break;

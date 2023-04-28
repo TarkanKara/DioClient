@@ -56,12 +56,11 @@ class UserApi {
   //Delete Users:----------------------------------------------------------------------
   // !! Delete yöntemi için, yalnızca o kimliği içeren kullanıcıyı güncellemek için kullanıcının id e ihtiyacımız var.
 
-  Future<Response> deleteUserApi(int id) async {
+  Future<void> deleteUserApi(int id) async {
     try {
-      final Response response = await dioClient.deleteMethod(
+      await dioClient.deleteMethod(
         "${Endpoints.users}/$id",
       );
-      return response;
     } catch (e) {
       rethrow;
     }
